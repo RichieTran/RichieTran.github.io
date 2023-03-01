@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Richie Pi Day Game</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="top">
+	<div class="logo">
+		<!--<img src="pi.png" alt="Pi" style="width:15px;height:15px;">
+		<u1>Richie's Pi Day Game</u1>-->
+		<img src="pi.png" alt="Pi" style="width:20px;height:20px;">
+	</div>
+	<div class="by">
+		<ui>by Richie Tran :)</ui>
+	</div>
+</div>
+<div class="wrapper">
+	<div class="gameSection">
+		<div class="gameTabs">
+			<div class="tabs">
+				<ul>
+					<li data-li="Name">Name</li>
+					<li class="active" data-li="Game">Play</li>
+					<li data-li="Leaderboard">Leaderboard</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="gameWrap">
+			<div class="gameItem Name" style="display: none;">
+				<div class="nameMem">
+					<label for="name">Enter your name:</label>
+					<input type="text" id="name-input">
+					<button onclick="">Submit</button>
+					<!--<button onclick="handleButtonClick()">Submit</button>-->
+				</div>
+			</div>
+
+			<div class="gameItem Game" style="display: block;">
+				<div class="GameMem">
+					<div class="accGame">
+						<p>How many digits of pi do you remember?</p>
+						<input type="text" id="input" onkeyup="checkDigit()">
+					</div>
+					<div class="score">
+						<p><span>Score:</span><p id="digits"></p></p><br>
+					</div>
+					<div class="guessAmt">
+						<p>Pi so far: <p id="guesses"></p></p>
+					</div>
+					<div class="message">
+						<p id="result"></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="gameItem Leaderboard" style="display: none;">
+				<div class="lboardMem">
+					<div class="nameBar">
+						<p><span>1.</span><!--<p id="name-input"></p>-->Richie</p>
+						<!--<script>
+							window.onload = function(){
+								var name = prompt("What's your name?");
+								var displayName = name
+							
+								document.getElementById("firstName").innerHTML = displayName;
+							};
+							</script>-->
+						<div class="barWrap">
+							<div class="innerBar" style="width: 80%"></div>
+						</div>
+					</div>
+					<div class="digits">
+						infinity digits
+					</div>
+				</div>
+				<div class="lboardMem">
+					<div class="nameBar">
+						<p><span>2.</span>Richie</p>
+						<div class="barWrap">
+							<div class="innerBar" style="width: 60%"></div>
+						</div>
+					</div>
+					<div class="digits">
+						203032 digits
+					</div>
+				</div>
+				<div class="lboardMem">
+					<div class="nameBar">
+						<p><span>3.</span>Richie</p>
+						<div class="barWrap">
+							<div class="innerBar" style="width: 40%;"></div>
+						</div>
+					</div>
+					<div class="digits">
+						46290 digits
+					</div>
+				</div>
+				<div class="lboardMem">
+					<div class="nameBar">
+						<p><span>4.</span>Richie</p>
+						<div class="barWrap">
+							<div class="innerBar" style="width: 20%"></div>
+						</div>
+					</div>
+					<div class="digits">
+						-400 digits
+					</div>
+				</div>
+				<div class="lboardMem">
+					<div class="nameBar">
+						<p><span>5.</span>Not Richie</p>
+						<div class="barWrap">
+							<div class="innerBar" style="width: 0%"></div>
+						</div>
+					</div>
+					<div class="digits">
+						Crazy amount of digits
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+<script src="scripts.js"></script>
+</body>
+</html>
